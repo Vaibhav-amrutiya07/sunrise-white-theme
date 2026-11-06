@@ -98,10 +98,10 @@ export function ScrubText({ text, className = "" }: { text: string; className?: 
   );
 }
 
-export function Eyebrow({ children, className = "", tone = "gold" }: { children: React.ReactNode; className?: string; tone?: "gold" | "ink" }) {
+export function Eyebrow({ children, className = "", tone = "gold" }: { children: React.ReactNode; className?: string; tone?: "gold" | "ink" | "navy" }) {
   return (
-    <p className={`mb-5 flex items-center gap-3 font-sub text-xs font-semibold uppercase tracking-[0.3em] ${tone === "ink" ? "text-gold-ink" : "text-gold"} ${className}`}>
-      <span className="h-px w-8 bg-gold" />
+    <p className={`mb-5 flex items-center gap-3 font-sub text-xs font-semibold uppercase tracking-[0.3em] ${tone === "ink" ? "text-gold-ink" : tone === "navy" ? "text-navy" : "text-gold"} ${className}`}>
+      <span className={`h-px w-8 ${tone === "navy" ? "bg-navy" : "bg-gold"}`} />
       {children}
     </p>
   );

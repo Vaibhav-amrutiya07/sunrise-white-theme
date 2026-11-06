@@ -1,0 +1,28 @@
+import Image from "next/image";
+
+export default function Logo({
+  className = "",
+  tone = "light",
+  compact = false,
+}: {
+  className?: string;
+  tone?: "light" | "dark";
+  compact?: boolean;
+}) {
+  return (
+    <span className={`inline-flex items-center ${className}`}>
+      <Image
+        src="/images/sunrise-logo-removebg.png"
+        alt="Sunrise Builders"
+        width={280}
+        height={180}
+        priority
+        className={`h-auto w-auto bg-white rounded-xl p-1 object-contain transition-all duration-500 ${
+          compact
+            ? "max-h-16 max-w-36"
+            : "max-h-20 max-w-48"
+        }`}
+      />
+    </span>
+  );
+}

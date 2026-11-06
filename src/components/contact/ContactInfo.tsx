@@ -37,19 +37,19 @@ export default function ContactInfo() {
 
         <div className="grid grid-cols-6 gap-4 lg:col-span-8">
           {/* CALL – the hero block */}
-          <a href={site.phoneHref} className="gi-block group relative col-span-6 overflow-hidden bg-navy p-7 text-offwhite sm:p-10 md:p-12">
-            <span aria-hidden className="absolute -right-24 -top-24 h-72 w-72 rounded-full opacity-0 transition-opacity duration-700 group-hover:opacity-100" style={{ background: "radial-gradient(circle, color-mix(in srgb, var(--gold) 35%, transparent), transparent 65%)" }} />
+          <a href={site.phoneHref} className="gi-block group relative col-span-6 overflow-hidden bg-gold p-7 text-navy sm:p-10 md:p-12">
+            <span aria-hidden className="absolute -right-24 -top-24 h-72 w-72 rounded-full opacity-0 transition-opacity duration-700 group-hover:opacity-100" style={{ background: "radial-gradient(circle, color-mix(in srgb, white 55%, transparent), transparent 65%)" }} />
             <div className="relative flex items-start justify-between">
-              <p className="font-sub text-[11px] font-semibold uppercase tracking-[0.3em] text-offwhite/60"><span className="text-gold">01</span> &nbsp;/&nbsp; Call Us</p>
-              <span className="grid h-12 w-12 place-items-center rounded-full border border-offwhite/15 text-gold transition-colors duration-500 group-hover:border-gold">{icons.call}</span>
+              <p className="font-sub text-[11px] font-semibold uppercase tracking-[0.3em] text-navy/70"><span className="text-navy">01</span> &nbsp;/&nbsp; Call Us</p>
+              <span className="grid h-12 w-12 place-items-center rounded-full border border-navy/25 text-navy transition-colors duration-500 group-hover:border-navy">{icons.call}</span>
             </div>
             <p className="relative mt-10 inline-block font-heading text-[clamp(1.8rem,5.2vw,3.75rem)] font-extrabold leading-none tracking-tight md:mt-16">
               {site.phone}
-              <span className="absolute -bottom-3 left-0 h-[2px] w-full origin-left scale-x-0 bg-gold transition-transform duration-700 ease-[cubic-bezier(.7,0,.2,1)] group-hover:scale-x-100" />
+              <span className="absolute -bottom-3 left-0 h-[2px] w-full origin-left scale-x-0 bg-navy transition-transform duration-700 ease-[cubic-bezier(.7,0,.2,1)] group-hover:scale-x-100" />
             </p>
             <div className="relative mt-10 flex items-center justify-between">
               <span />
-              <span className="grid h-11 w-11 place-items-center rounded-full bg-gold text-navy"><SwapArrow dir="diag" /></span>
+              <span className="grid h-11 w-11 place-items-center rounded-full bg-navy text-offwhite"><SwapArrow dir="diag" /></span>
             </div>
           </a>
 

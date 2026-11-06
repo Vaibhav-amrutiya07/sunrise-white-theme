@@ -14,7 +14,7 @@ export default function FinalCta() {
   const root = useRef<HTMLElement>(null);
 
   useMotion(root, () => {
-    // the headline is "formwork": gold is poured in from the bottom as you scroll
+    // the headline is "formwork": navy is poured in from the bottom as you scroll
     gsap.fromTo(
       ".cta-fill",
       { clipPath: "inset(100% 0% 0% 0%)" },
@@ -24,23 +24,24 @@ export default function FinalCta() {
   });
 
   return (
-    <section ref={root} className="relative overflow-hidden bg-navy-deep py-12 text-offwhite md:py-20">
+    <section ref={root} className="relative overflow-hidden bg-gold py-12 text-navy md:py-20">
       <div className="hazard absolute inset-x-0 top-0 h-3" />
-      <div className="cta-scene pointer-events-none absolute bottom-0 right-0 h-[85%] w-1/2 opacity-60">
-        <SiteScene floors={8} className="h-full w-full text-offwhite/25" />
+      {/* inside the scene, "gold" parts (hook, pile, ground line) are re-coloured navy so they stay visible on the gold background */}
+      <div className="cta-scene pointer-events-none absolute bottom-0 right-0 h-[85%] w-1/2 opacity-60" style={{ "--gold": "var(--navy)" } as React.CSSProperties}>
+        <SiteScene floors={8} className="h-full w-full text-navy/25" />
       </div>
       <div className="wrap relative">
-        <Eyebrow>Ready to Break Ground?</Eyebrow>
+        <Eyebrow tone="navy">Ready to Break Ground?</Eyebrow>
         <div className="cta-head relative max-w-6xl">
-          <h2 className={`outline-text ${cls}`}>{text}</h2>
-          <p aria-hidden className={`cta-fill absolute inset-0 text-gold ${cls}`}>{text}</p>
+          <h2 className={`outline-text-navy ${cls}`}>{text}</h2>
+          <p aria-hidden className={`cta-fill absolute inset-0 text-navy ${cls}`}>{text}</p>
         </div>
-        <p className="mt-10 max-w-xl font-sub text-lg text-offwhite/75">
+        <p className="mt-10 max-w-xl font-sub text-lg text-navy/80">
           Have a construction project in mind? Let&apos;s discuss your requirements and explore the right solutions for your vision.
         </p>
         <div className="mt-10 flex flex-wrap gap-4">
-          <Button href="/contact-us">Start Your Project</Button>
-          <Button href="/contact-us" variant="outline">Contact Our Team</Button>
+          <Button href="/contact-us" variant="solidNavy">Start Your Project</Button>
+          <Button href="/contact-us" variant="outlineNavy">Contact Our Team</Button>
         </div>
       </div>
     </section>

@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useEffect, useRef } from "react";
 import { gsap } from "@/lib/gsap";
 
-type Variant = "gold" | "outline" | "outlineDark" | "navy";
+type Variant = "gold" | "outline" | "outlineDark" | "navy" | "solidNavy" | "outlineNavy";
 
 const base =
   "group relative inline-flex items-center justify-center overflow-hidden rounded-full font-heading font-medium tracking-wide";
@@ -14,18 +14,24 @@ const variants: Record<Variant, string> = {
   outline: "border border-offwhite/40 text-offwhite",
   outlineDark: "border border-navy/30 text-navy", // for white backgrounds
   navy: "bg-navy text-offwhite",
+  solidNavy: "bg-navy text-offwhite ring-1 ring-navy", // for gold backgrounds
+  outlineNavy: "border border-navy/50 text-navy", // for gold backgrounds
 };
 const fills: Record<Variant, string> = {
   gold: "bg-offwhite",
   outline: "bg-gold",
   outlineDark: "bg-gold",
   navy: "bg-gold",
+  solidNavy: "bg-offwhite",
+  outlineNavy: "bg-navy",
 };
 const labelHover: Record<Variant, string> = {
   gold: "",
   outline: "group-hover:text-navy",
   outlineDark: "group-hover:text-navy",
   navy: "group-hover:text-navy",
+  solidNavy: "group-hover:text-navy",
+  outlineNavy: "group-hover:text-offwhite",
 };
 
 export function buttonClasses(variant: Variant = "gold", size: "md" | "sm" = "md") {

@@ -73,9 +73,9 @@ export default function VisionMission({ vision, mission }: Props) {
         {/* one gold line: from the Vision horizon down into the Mission (desktop) */}
         <div aria-hidden className="vm-link pointer-events-none absolute inset-x-6 -bottom-36 hidden h-[19rem] lg:block">
           <svg viewBox="0 0 1200 300" preserveAspectRatio="none" className="absolute inset-0 h-full w-full overflow-visible">
-            <path className="vm-spine" d="M936 0 C 936 135, 264 120, 264 300" pathLength={1} strokeDasharray="1" fill="none" stroke="var(--gold)" strokeWidth="1.5" vectorEffect="non-scaling-stroke" />
+            <path className="vm-spine" d="M936 0 C 936 135, 264 120, 264 300" pathLength={1} strokeDasharray="1" fill="none" stroke="var(--navy)" strokeWidth="1.5" vectorEffect="non-scaling-stroke" />
           </svg>
-          <span className="absolute bottom-0 left-[22%] h-2.5 w-2.5 -translate-x-1/2 translate-y-1/2 rotate-45 bg-gold" />
+          <span className="absolute bottom-0 left-[22%] h-2.5 w-2.5 -translate-x-1/2 translate-y-1/2 rotate-45 bg-navy" />
         </div>
         <div className="relative lg:col-span-7">
           <span aria-hidden className="vm-v-num outline-text-navy pointer-events-none absolute -left-2 -top-16 select-none font-heading text-[clamp(8rem,20vw,17rem)] font-extrabold leading-none opacity-[0.13] md:-top-24">
@@ -108,7 +108,7 @@ export default function VisionMission({ vision, mission }: Props) {
       </div>
 
       {/* ---------- 02 MISSION ---------- */}
-      <div className="vm-mission relative bg-navy pb-28 pt-28 text-offwhite [clip-path:polygon(0_6%,100%_0,100%_100%,0_100%)] md:pb-36 md:pt-40">
+      <div className="vm-mission relative bg-gold pb-28 pt-28 text-navy [clip-path:polygon(0_6%,100%_0,100%_100%,0_100%)] md:pb-36 md:pt-40">
         <div className="wrap relative grid items-center gap-16 lg:grid-cols-12 lg:gap-10">
           {/* overlapping image + text plate */}
           <div className="vm-m-par relative order-2 lg:order-1 lg:col-span-5">
@@ -116,17 +116,17 @@ export default function VisionMission({ vision, mission }: Props) {
               <Photo src={images.intro} alt="Daily execution – planning and coordination on site" sizes="(min-width:1024px) 30vw, 85vw" className="h-full w-full" />
               <div className="absolute inset-0 bg-navy/30 mix-blend-multiply" />
             </div>
-            <div aria-hidden className="vm-m-plate absolute -bottom-6 right-0 h-2/3 w-1/2 border border-gold/60" />
+            <div aria-hidden className="vm-m-plate absolute -bottom-6 right-0 h-2/3 w-1/2 border border-navy/50" />
           </div>
 
           <div className="relative order-1 lg:order-2 lg:col-span-7 lg:pl-10">
-            <span aria-hidden className="vm-m-num outline-text pointer-events-none absolute -top-16 right-0 select-none font-heading text-[clamp(8rem,20vw,17rem)] font-extrabold leading-none opacity-[0.12] md:-top-28">
+            <span aria-hidden className="vm-m-num outline-text-navy pointer-events-none absolute -top-16 right-0 select-none font-heading text-[clamp(8rem,20vw,17rem)] font-extrabold leading-none opacity-[0.12] md:-top-28">
               02
             </span>
             <div className="relative">
-              <p className="flex items-center gap-4 font-sub text-xs font-semibold uppercase tracking-[0.3em] text-offwhite">
-                <span className="font-heading text-sm text-gold">02</span>
-                <span className="h-px w-10 bg-offwhite/30" />
+              <p className="flex items-center gap-4 font-sub text-xs font-semibold uppercase tracking-[0.3em] text-navy">
+                <span className="font-heading text-sm text-navy">02</span>
+                <span className="h-px w-10 bg-navy/30" />
                 Our Mission
               </p>
               <p className="vm-m-text mt-8 max-w-2xl font-heading text-[clamp(1.4rem,2.6vw,2.3rem)] font-semibold leading-[1.28]">
@@ -136,12 +136,12 @@ export default function VisionMission({ vision, mission }: Props) {
 
             {/* precision timeline */}
             <ol aria-hidden className="vm-steps relative mt-14 grid grid-cols-4 gap-x-6 pt-8">
-              <span aria-hidden className="absolute left-0 right-0 top-0 h-px bg-offwhite/15" />
-              <span aria-hidden className="vm-track absolute left-0 right-0 top-0 h-px origin-left bg-gold" />
+              <span aria-hidden className="absolute left-0 right-0 top-0 h-px bg-navy/20" />
+              <span aria-hidden className="vm-track absolute left-0 right-0 top-0 h-px origin-left bg-navy" />
               {STEPS.map((s, i) => (
                 <li key={s} className="vm-step relative">
-                  <span aria-hidden className="absolute -top-[2.375rem] left-0 h-3 w-3 rotate-45 border border-gold bg-navy" />
-                  <span className="block font-sub text-[11px] font-semibold tabular-nums text-gold">0{i + 1}</span>
+                  <span aria-hidden className="absolute -top-[2.375rem] left-0 h-3 w-3 rotate-45 border border-navy bg-gold" />
+                  <span className="block font-sub text-[11px] font-semibold tabular-nums text-navy">0{i + 1}</span>
                 </li>
               ))}
             </ol>

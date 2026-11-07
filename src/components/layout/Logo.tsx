@@ -1,4 +1,5 @@
 import Image from "next/image";
+import logo from '../../app/assets/images/sunrise-logo-removebg.png'
 
 export default function Logo({
   className = "",
@@ -12,7 +13,7 @@ export default function Logo({
   return (
     <span className={`inline-flex items-center ${className}`}>
       <Image
-        src="/images/sunrise-logo-removebg.png"
+        src={logo.src}
         alt="Sunrise Builders"
         width={280}
         height={180}

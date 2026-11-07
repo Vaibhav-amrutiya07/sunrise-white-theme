@@ -3,7 +3,9 @@ import { normalizeEnquiry, validateEnquiry } from "@/lib/enquiryValidation";
 
 export const runtime = "nodejs";
 
-const CONTACT_API = "https://getdemo.in/Sunrise_Builders/api/contact";
+// const CONTACT_API = "https://getdemo.in/Sunrise_Builders/api/contact";
+
+const CONTACT_API = "https://sunrise-builders.in/Sunrise_Builders/api/contact";
 
 export async function POST(req: Request) {
   try {
